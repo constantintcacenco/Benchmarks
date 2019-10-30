@@ -12,15 +12,19 @@ Parameters are global variables declared at the begining of the script
 
 ```
 python test_case_generator.py file_path_1 file_path_2
-e.g: 
-python test_case_generator.py files/swan.txt files/dubliners.txt
-or
-python test_case_generator.py files/dubliners.txt files/swan.txt 
-
-this way testcases will be applied to both files
-
-
 ```
+e.g: 
+```
+python test_case_generator.py files/swan.txt files/dubliners.txt
+```
+or
+```
+python test_case_generator.py files/dubliners.txt files/swan.txt 
+```
+
+This way testcases can be applied to both files (or n files).
+
+
 
 (Python version 3.7.0)
 
