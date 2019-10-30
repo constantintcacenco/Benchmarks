@@ -6,31 +6,27 @@ Further purpose is to analyze and compare the Similarity Algorithms (LSH, TLSH, 
 
 ## Parameters
 
-config.ini file contains the following parameters:
-
-```
-input_location = directory where the input files are located
-output_location = directory of the generated files
-NR_WORDS_CUT: number of words to be cut from the file
-NR_LINES_CUT = number of lines to be cut from the file
-NR_WORDS_ADDED = number of word to be added to the file
-NR_LINES_ADDED = number of lines to be added to the file
-SECTION_SIZE = size (number of words) of the section the files will be divided (these sections will shuffled)
-```
+Parameters are global variables declared at the begining of the script
 
 ## Run
 
 ```
-python files_generator.py
+python test_case_generator.py file_path_1 file_path_2
+e.g: 
+python test_case_generator.py files/swan.txt files/dubliners.txt
+or
+python test_case_generator.py files/dubliners.txt files/swan.txt 
+
+this way testcases will be applied to both files
+
+
 ```
 
 (Python version 3.7.0)
 
 ## Performed tests
 
-"input" directory contains 2 text files: metallica.txt and wikipedia.txt 
-
-"output" directory contains 21 generated file according to the cases below and the parameters from config.ini:
+"files" directory contains 2 text files: swan.txt and dubliners.txt plus 44 generated file according to the cases below (22 for each file)
 
 1. Exactly similar files
 2. Few words cut from the beginning
@@ -53,8 +49,6 @@ python files_generator.py
 19. Interleaving paragraphs with unrelated text (can be scrambling with another original text)
 20. Interleaving sentences with unrelated text (can be scrambling with another original text)
 21. Interleaving words with unrelated text (can be scrambling with another original text)
+22. Adding sentences by percentage
 
-## Notes
-
-Some of the generated files don't contain endl's (e.g. scrambling words). To view the files, please use a text editor which can automatically structure the file with endlines (e.g. Sublime).
 
